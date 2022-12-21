@@ -7,7 +7,7 @@ import { act } from 'react-dom/test-utils';
 describe('Game component', () => {
 	test('レンダリングテスト', () => {
 		const { container } = render(<Game />);
-		expect(container).toMatchSnapshot();
+		expect(container).toMatchInlineSnapshot();
 	});
 
 	describe('数当てテスト', () => {
