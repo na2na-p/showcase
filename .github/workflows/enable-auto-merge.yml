@@ -6,6 +6,7 @@ on:
       - reopened
     branches:
       - main
+      - master
 
 jobs:
   enable-auto-merge:
