@@ -11,7 +11,7 @@ type routes = {
 	component: JSX.Element;
 }
 
-type pages = 'home' | 'childToParent' | 'lazyHooks' | 'numberGuessingGame' | 'IpCalculator';
+type Pages = 'home' | 'childToParent' | 'lazyHooks' | 'numberGuessingGame' | 'IpCalculator';
 const routes =
 	{
 		home: {
@@ -35,7 +35,7 @@ const routes =
 			component: <IpCalculator />
 		}
 	} as const satisfies {
-		[P in pages]: routes;
+		[P in Pages]: routes;
 	};
 
 export default routes;
