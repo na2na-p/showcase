@@ -130,4 +130,15 @@ export class CalcIp {
 		// foreachで4回
 		return ipString.join('');
 	}
+
+	public getAllProperties(): ipObj {
+		return {
+			ip: this.#ip,
+			subnet: this.#subnet,
+			networkAddress: this.#networkAddress,
+			broadcastAddress: this.#broadcastAddress,
+			hostAddress: this.#hostAddress,
+			cidr: this.#cidr
+		};
+	}
 }

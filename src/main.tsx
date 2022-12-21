@@ -20,6 +20,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 				<Route
 					path={routes.numberGuessingGame.path()}
 					element={routes.numberGuessingGame.component} />
+				<Route
+					path={routes.IpCalculator.path()}
+					element={routes.IpCalculator.component} />
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>

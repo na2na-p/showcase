@@ -20,9 +20,12 @@ export default () => {
 				<ListItemText primary="呼んだり呼ばなかったり" />
 			</ListItemButton>
 			<Divider />
-			<Typography variant="subtitle1">数あてゲーム</Typography>
+			<Typography variant="subtitle1">ゲーム</Typography>
 			<ListItemButton LinkComponent="a" href={routes.numberGuessingGame.path()}>
 				<ListItemText primary="数あてゲーム" />
+			</ListItemButton>
+			<ListItemButton LinkComponent="a" href={routes.IpCalculator.path()}>
+				<ListItemText primary="IP計算機" />
 			</ListItemButton>
 		</>
 	);
