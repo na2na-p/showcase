@@ -40,6 +40,18 @@ export default () => {
 <Button variant="contained" onClick={handleClick}>値のセット</Button>`} components={{
 				code: CodeBlock
 			}}/>
+			<ReactMarkdown markdown={`\`\`\`
+const useLazyHooks = ({ value }: { value: string }) => {
+	alert(\`ここでHookを発火させた: \${value}\`);
+};
+
+export default ({ value }: { value: string }) => {
+	useLazyHooks({ value });
+	return <></>;
+};
+`} components={{
+				code: CodeBlock
+			}}/>
 		</>
 	);
 };
