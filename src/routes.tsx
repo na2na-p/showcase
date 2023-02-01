@@ -4,14 +4,15 @@ import ChildToParent from '@/pages/ChildToParent';
 import Home from '@/Home';
 import LazyHooks from '@/pages/LazyHooks';
 import Game from '@/pages/Game';
-import IpCalculator from './pages/IpCalculator';
+import IpCalculator from '@/pages/IpCalculator';
+import ChmodGenerator from '@/pages/ChmodGenerator';
 
 type routes = {
 	path: () => string;
 	component: JSX.Element;
 }
 
-type Pages = 'home' | 'childToParent' | 'lazyHooks' | 'numberGuessingGame' | 'IpCalculator';
+type Pages = 'home' | 'childToParent' | 'lazyHooks' | 'numberGuessingGame' | 'IpCalculator' | 'chmodGenerator';
 const routes =
 	{
 		home: {
@@ -33,6 +34,10 @@ const routes =
 		IpCalculator: {
 			path: () => '/ip-calculator',
 			component: <IpCalculator />
+		},
+		chmodGenerator: {
+			path: () => '/chmod-generator',
+			component: <ChmodGenerator />
 		}
 	} as const satisfies {
 		[P in Pages]: routes;

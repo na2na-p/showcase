@@ -27,6 +27,9 @@ export default () => {
 			<ListItemButton LinkComponent="a" href={routes.IpCalculator.path()}>
 				<ListItemText primary="IP計算機" />
 			</ListItemButton>
+			<ListItemButton LinkComponent="a" href={routes.chmodGenerator.path()}>
+				<ListItemText primary="chmodジェネレータ" />
+			</ListItemButton>
 		</>
 	);
 };
