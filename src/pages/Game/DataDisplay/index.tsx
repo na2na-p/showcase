@@ -4,7 +4,7 @@ import Table from '@/components/dataDisplay/Table';
 
 import type { historyType } from '../types';
 
-export default ({ histories }: { histories: historyType[] }) => {
+const DataDisplay = ({ histories }: { histories: historyType[] }) => {
 	const tableHeaders = ['回数', 'あなたの答え', '判定'];
 	const historyRows = histories.map((historyRecord, index) => {
 		const { history, result } = historyRecord;
@@ -14,3 +14,5 @@ export default ({ histories }: { histories: historyType[] }) => {
 		<Table headers={tableHeaders} rows={historyRows} />
 	);
 };
+
+export default DataDisplay;

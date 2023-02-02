@@ -5,7 +5,7 @@ import Button from '@/components/input/Button';
 
 import { useHooks } from './hooks';
 
-export default ({ setter }: { setter: (result: string) => void }) => {
+const Input = ({ setter }: { setter: (result: string) => void }) => {
 	const { inputRef, onButtonClick } = useHooks({ setter });
 	return (
 		<>
@@ -14,3 +14,5 @@ export default ({ setter }: { setter: (result: string) => void }) => {
 		</>
 	);
 };
+
+export default Input;

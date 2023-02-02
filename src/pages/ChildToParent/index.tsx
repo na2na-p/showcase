@@ -5,7 +5,7 @@ import Divider from '@/components/layout/Divider';
 
 import Child from './Child';
 
-export default () => {
+const ChildToParent = () => {
 	const [name, setName] = useState('');
 
 	return (
@@ -18,3 +18,5 @@ export default () => {
 		</>
 	);
 };
+
+export default ChildToParent;

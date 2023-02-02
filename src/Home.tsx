@@ -7,7 +7,7 @@ import ListItemText from '@/components/dataDisplay/List/ListItemText';
 
 import routes from './routes';
 
-export default () => {
+const Home = () => {
 	return (
 		<>
 			<Typography variant="h5">Showcase - React</Typography>
@@ -33,3 +33,5 @@ export default () => {
 		</>
 	);
 };
+
+export default Home;

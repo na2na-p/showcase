@@ -13,7 +13,7 @@ export type GameProps = {
 	answer?: number;
 }
 
-export default ({ answer }: GameProps) => {
+const Game = ({ answer }: GameProps) => {
 	const { histories, setResultHistory, onResetButtonClick } = useHooks({ answer });
 	return (
 		<Stack spacing={2}>
@@ -26,3 +26,5 @@ export default ({ answer }: GameProps) => {
 		</Stack>
 	);
 };
+
+export default Game;

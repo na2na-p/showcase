@@ -2,7 +2,7 @@ import React from 'react';
 
 import ChildToParent from '@/pages/ChildToParent';
 import Home from '@/Home';
-import LazyHooks from '@/pages/LazyHooks';
+import LazyHooks from '@/pages/LazyHooksDemo';
 import Game from '@/pages/Game';
 import IpCalculator from '@/pages/IpCalculator';
 import ChmodGenerator from '@/pages/ChmodGenerator';
