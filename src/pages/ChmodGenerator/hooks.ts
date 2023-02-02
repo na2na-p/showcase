@@ -7,7 +7,7 @@ export const useHooks = (Checkbox: FC<CheckboxProps>) => {
 	const [owner, setOwner] = useState<number>(0);
 	const [group, setGroup] = useState<number>(0);
 	const [others, setOthers] = useState<number>(0);
-	const headers = ['/', 'Owner', 'Group', 'Other'];
+	const headers = ['\u00A0', 'Owner', 'Group', 'Other'];
 
 	const checkboxStates = useMemo(() => {
 		return {
@@ -29,21 +29,17 @@ export const useHooks = (Checkbox: FC<CheckboxProps>) => {
 		};
 	}, [others, owner, group]);
 
-	console.log(checkboxStates);
-
 	const onClickHandlers = useMemo(() => {
 		return {
 			owner: {
-				read: () =>
-					setOwner(checkboxStates.owner.read ? owner - 4 : owner + 4),
+				read: () => setOwner(checkboxStates.owner.read ? owner - 4 : owner + 4),
 				write: () =>
 					setOwner(checkboxStates.owner.write ? owner - 2 : owner + 2),
 				execute: () =>
 					setOwner(checkboxStates.owner.execute ? owner - 1 : owner + 1)
 			},
 			group: {
-				read: () =>
-					setGroup(checkboxStates.group.read ? group - 4 : group + 4),
+				read: () => setGroup(checkboxStates.group.read ? group - 4 : group + 4),
 				write: () =>
 					setGroup(checkboxStates.group.write ? group - 2 : group + 2),
 				execute: () =>
@@ -106,9 +102,10 @@ export const useHooks = (Checkbox: FC<CheckboxProps>) => {
 					checked: checkboxStates.others.execute,
 					onClick: onClickHandlers.others.execute
 				})
-			]
+			],
+			['Result', owner, group, others]
 		];
-	}, [Checkbox, checkboxStates, onClickHandlers]);
+	}, [Checkbox, checkboxStates, onClickHandlers, owner, group, others]);
 
 	return {
 		headers,
