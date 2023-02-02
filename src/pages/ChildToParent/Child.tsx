@@ -6,7 +6,7 @@ type ChildProps = {
 	setName: Dispatch<SetStateAction<string>>
 }
 
-export default ({ setName }: ChildProps) => {
+const Child = ({ setName }: ChildProps) => {
 	const textFieldOnChange = (
 		e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
 	) => {
@@ -24,3 +24,5 @@ export default ({ setName }: ChildProps) => {
 		</>
 	);
 };
+
+export default Child;

@@ -1,11 +1,12 @@
-import React from 'react';
-import { Divider, SxProps } from '@mui/material';
+import { Divider as MuiDivider, SxProps } from '@mui/material';
 
-export default () => {
+const Divider = () => {
 	const sx: SxProps = {
 		// 上下に余白
 		marginTop: 2,
 		marginBottom: 2
 	};
-	return <Divider sx={sx} />;
+	return <MuiDivider sx={sx} />;
 };
+
+export default Divider;

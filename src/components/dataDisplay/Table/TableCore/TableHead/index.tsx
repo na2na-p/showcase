@@ -4,7 +4,7 @@ import MuiTableHead from '@mui/material/TableHead';
 import MuiTableRow from '@mui/material/TableRow';
 import Cell from '../Cell';
 
-export default ({ headers }: { headers: ReactNode[] }) => {
+const TableHead = ({ headers }: { headers: ReactNode[] }) => {
 	return (
 		<MuiTableHead>
 			<MuiTableRow>
@@ -15,3 +15,5 @@ export default ({ headers }: { headers: ReactNode[] }) => {
 		</MuiTableHead>
 	);
 };
+
+export default TableHead;

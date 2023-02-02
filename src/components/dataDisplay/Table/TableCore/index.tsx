@@ -11,7 +11,7 @@ export type TableCoreProps = {
 	rows: ReactNode[][]
 }
 
-export default ({ headers, rows }: TableCoreProps) => {
+const TableCore = ({ headers, rows }: TableCoreProps) => {
 	return (
 		<MuiTableContainer>
 			<MuiTable>
@@ -21,3 +21,5 @@ export default ({ headers, rows }: TableCoreProps) => {
 		</MuiTableContainer>
 	);
 };
+
+export default TableCore;

@@ -7,7 +7,7 @@ import ListItemText from '@/components/dataDisplay/List/ListItemText';
 
 import routes from './routes';
 
-export default () => {
+const Home = () => {
 	return (
 		<>
 			<Typography variant="h5">Showcase - React</Typography>
@@ -27,6 +27,11 @@ export default () => {
 			<ListItemButton LinkComponent="a" href={routes.IpCalculator.path()}>
 				<ListItemText primary="IP計算機" />
 			</ListItemButton>
+			<ListItemButton LinkComponent="a" href={routes.chmodGenerator.path()}>
+				<ListItemText primary="chmodジェネレータ" />
+			</ListItemButton>
 		</>
 	);
 };
+
+export default Home;

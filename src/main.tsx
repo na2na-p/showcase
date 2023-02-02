@@ -23,6 +23,12 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 				<Route
 					path={routes.IpCalculator.path()}
 					element={routes.IpCalculator.component} />
+				<Route
+					path={routes.chmodGenerator.path()}
+					element={routes.chmodGenerator.component} />
+				<Route
+					path="*"
+					element={<div>404</div>} />
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>

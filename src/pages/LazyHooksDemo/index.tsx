@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 
 import { TextField } from '@mui/material';
 
@@ -10,7 +10,7 @@ import CodeBlock from '@/components/dataDisplay/CodeBlock';
 
 import LazyHooks from './LazyHooks';
 
-export default () => {
+const LazyHooksDemo =() => {
 	const [value, setValue] = useState<string | null>(null);
 	const inputRef = useRef<HTMLInputElement>(null);
 
@@ -55,3 +55,5 @@ export default ({ value }: { value: string }) => {
 		</>
 	);
 };
+
+export default LazyHooksDemo;
