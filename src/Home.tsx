@@ -5,7 +5,7 @@ import ListItemText from '@/components/dataDisplay/List/ListItemText';
 import Divider from '@/components/layout/Divider';
 import Typography from '@/components/layout/Typography';
 
-import routes from './routes';
+import { routes } from './routes';
 
 const Home = () => {
 	const navigate = useNavigate();
