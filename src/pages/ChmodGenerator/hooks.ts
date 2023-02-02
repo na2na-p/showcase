@@ -1,5 +1,7 @@
-import { CheckboxProps } from '@/components/input/Checkbox';
-import { createElement, FC, useMemo, useState } from 'react';
+import type { FC } from 'react';
+import { createElement, useMemo, useState } from 'react';
+
+import type { CheckboxProps } from '@/components/input/Checkbox';
 
 type Permission = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
 

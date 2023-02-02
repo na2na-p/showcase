@@ -1,4 +1,5 @@
-import React, { Dispatch, SetStateAction, ChangeEvent } from 'react';
+import type { Dispatch, SetStateAction, ChangeEvent } from 'react';
+import React from 'react';
 
 import TextField from '@/components/input/TextField';
 

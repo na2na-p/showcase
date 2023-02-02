@@ -1,8 +1,7 @@
 import React from 'react';
-
 import LibReactMarkdown from 'react-markdown';
-import { SpecialComponents } from 'react-markdown/lib/ast-to-react';
-import { NormalComponents } from 'react-markdown/lib/complex-types';
+import type { SpecialComponents } from 'react-markdown/lib/ast-to-react';
+import type { NormalComponents } from 'react-markdown/lib/complex-types';
 
 const ReactMarkdown = ({ markdown, components }: {markdown: string, components: Partial<Omit<NormalComponents, keyof SpecialComponents> & SpecialComponents>}) => {
 	return (

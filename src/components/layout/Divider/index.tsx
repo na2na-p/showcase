@@ -1,4 +1,5 @@
-import { Divider as MuiDivider, SxProps } from '@mui/material';
+import type { SxProps } from '@mui/material';
+import { Divider as MuiDivider } from '@mui/material';
 
 const Divider = () => {
 	const sx: SxProps = {

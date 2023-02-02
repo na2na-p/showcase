@@ -17,6 +17,7 @@ module.exports = {
 	},
 	'plugins': [
 		'react',
+		'import',
 		'react-hooks',
 		'react-refresh',
 		'@typescript-eslint'
@@ -38,6 +39,47 @@ module.exports = {
 		'no-unused-vars': 'off',
 		'react/prop-types': 'off',
 		'spaced-comment': ['error', 'always', { markers: ['/ <reference'] }],
-		'react-refresh/only-export-components': 'warn'
+		'react-refresh/only-export-components': 'warn',
+		'import/order': [
+			'error',
+			{
+				'groups': [
+					'builtin',
+					'external',
+					'internal',
+					['sibling', 'parent'],
+					'object'
+				],
+				'pathGroups': [
+					{
+						'pattern': '@/**',
+						'group': 'external',
+						'position': 'after'
+					}
+				],
+				'alphabetize': {
+					'order': 'asc',
+					'caseInsensitive': true
+				},
+				'newlines-between': 'always'
+			}
+		],
+		'@typescript-eslint/consistent-type-imports': [
+			'error',
+			{ 'prefer': 'type-imports' }
+		],
+		'import/no-duplicates': 'error',
+		'@typescript-eslint/naming-convention': [
+			'error',
+			{
+				'selector': 'typeAlias',
+				'format': ['PascalCase']
+			}
+		]
+	},
+	'settings': {
+		'react': {
+			'version': 'detect'
+		}
 	}
 };

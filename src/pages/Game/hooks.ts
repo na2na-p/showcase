@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { historyType } from './types';
+
+import type { HistoryType } from './types';
 
 export const useHooks = ({
 	answer
@@ -7,7 +8,7 @@ export const useHooks = ({
 	answer?: number
 }) => {
 	const initialAnswer = answer || Math.floor(Math.random() * 100) + 1;
-	const [histories, setHistories] = useState<historyType[]>([]);
+	const [histories, setHistories] = useState<HistoryType[]>([]);
 	const [answerState] = useState(initialAnswer);
 
 	const setResultHistory = (result: string) => {

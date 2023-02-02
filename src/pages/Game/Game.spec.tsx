@@ -1,8 +1,9 @@
 // import '@testing-library/jest-dom'; // jestのアサーションがエラーになる場合は明示的にimport
-import { describe, expect, test } from 'vitest';
-import Game from '.';
 import { render, screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
+import { describe, expect, test } from 'vitest';
+
+import Game from '.';
 
 describe('Game component', () => {
 	// test('レンダリングテスト', () => {

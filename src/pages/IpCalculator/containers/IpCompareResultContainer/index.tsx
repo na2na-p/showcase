@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 
-import Typography from '@/components/layout/Typography';
 import Stack from '@/components/layout/Stack';
+import Typography from '@/components/layout/Typography';
 
-import { CalcIp, Compare } from '../../utils/mod';
+import type { Compare } from '../../utils/mod';
+import { CalcIp } from '../../utils/mod';
 
 const IpCompareResultContainer = ({ compare }: { compare: Compare }) => {
 	return (

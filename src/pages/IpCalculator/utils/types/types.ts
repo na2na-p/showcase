@@ -1,15 +1,15 @@
-export type ipObj = {
-    ip: ipBin;
-    subnet: ipBin;
-    networkAddress: ipBin;
-    broadcastAddress: ipBin;
-    hostAddress: ipBin;
+export type IpObj = {
+    ip: IpBin;
+    subnet: IpBin;
+    networkAddress: IpBin;
+    broadcastAddress: IpBin;
+    hostAddress: IpBin;
     cidr: number | undefined;
 }
 
-export type ipBin = bigint;
+export type IpBin = bigint;
 
-export type resultType = {
+export type ResultType = {
 	source: {
 		ip: string;
 		subnet: string;
