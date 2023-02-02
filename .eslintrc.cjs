@@ -18,6 +18,7 @@ module.exports = {
 	'plugins': [
 		'react',
 		'react-hooks',
+		'react-refresh',
 		'@typescript-eslint'
 	],
 	'rules': {
@@ -36,6 +37,7 @@ module.exports = {
 		'object-curly-spacing': ['error', 'always'],
 		'no-unused-vars': 'off',
 		'react/prop-types': 'off',
-		'spaced-comment': ['error', 'always', { markers: ['/ <reference'] }]
+		'spaced-comment': ['error', 'always', { markers: ['/ <reference'] }],
+		'react-refresh/only-export-components': 'warn'
 	}
 };
