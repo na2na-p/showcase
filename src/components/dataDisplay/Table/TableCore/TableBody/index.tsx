@@ -1,7 +1,8 @@
-import React, { ReactNode } from 'react';
-
 import MuiTableBody from '@mui/material/TableBody';
 import MuiTableRow from '@mui/material/TableRow';
+import type { ReactNode } from 'react';
+import React from 'react';
+
 import Cell from '../Cell';
 
 const TableBody = ({ rows }: { rows: ReactNode[][] }) => {

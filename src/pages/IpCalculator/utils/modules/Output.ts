@@ -1,7 +1,7 @@
-import { resultType } from '../types/types.js';
+import type { ResultType } from '../types/types.js';
 
 export class Output {
-	constructor(result: resultType) {
+	constructor(result: ResultType) {
 		process.stdout.write(`サーバ:\t\t${result.source.ip}\t${result.source.subnet}\n`);
 		process.stdout.write(`クライアント:\t${result.dist.ip}\t${result.dist.subnet}\n`);
 

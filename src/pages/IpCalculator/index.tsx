@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Typography from '@/components/layout/Typography';
 import Divider from '@/components/layout/Divider';
 import Stack from '@/components/layout/Stack';
+import Typography from '@/components/layout/Typography';
 
 import CalcContainer from './containers/CalcContainer';
 import IpCompareResultContainer from './containers/IpCompareResultContainer';

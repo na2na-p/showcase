@@ -1,7 +1,11 @@
-import { CheckboxProps } from '@/components/input/Checkbox';
-import { createElement, FC, useMemo, useState } from 'react';
+import type { FC } from 'react';
+import { createElement, useMemo, useState } from 'react';
+
+import type { CheckboxProps } from '@/components/input/Checkbox';
 
 type Permission = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
+
+import PERMISSION_LEVELS from './PERMISSION_LEVELS';
 
 export const useHooks = (Checkbox: FC<CheckboxProps>) => {
 	const [owner, setOwner] = useState<number>(0);
@@ -12,19 +16,19 @@ export const useHooks = (Checkbox: FC<CheckboxProps>) => {
 	const checkboxStates = useMemo(() => {
 		return {
 			owner: {
-				read: owner & 4 ? true : false,
-				write: owner & 2 ? true : false,
-				execute: owner & 1 ? true : false
+				read: owner & PERMISSION_LEVELS.read ? true : false,
+				write: owner & PERMISSION_LEVELS.write ? true : false,
+				execute: owner & PERMISSION_LEVELS.execute ? true : false
 			},
 			group: {
-				read: group & 4 ? true : false,
-				write: group & 2 ? true : false,
-				execute: group & 1 ? true : false
+				read: group & PERMISSION_LEVELS.read ? true : false,
+				write: group & PERMISSION_LEVELS.write ? true : false,
+				execute: group & PERMISSION_LEVELS.execute ? true : false
 			},
 			others: {
-				read: others & 4 ? true : false,
-				write: others & 2 ? true : false,
-				execute: others & 1 ? true : false
+				read: others & PERMISSION_LEVELS.read ? true : false,
+				write: others & PERMISSION_LEVELS.write ? true : false,
+				execute: others & PERMISSION_LEVELS.execute ? true : false
 			}
 		};
 	}, [others, owner, group]);
@@ -32,26 +36,26 @@ export const useHooks = (Checkbox: FC<CheckboxProps>) => {
 	const onClickHandlers = useMemo(() => {
 		return {
 			owner: {
-				read: () => setOwner(checkboxStates.owner.read ? owner - 4 : owner + 4),
+				read: () => setOwner(checkboxStates.owner.read ? owner - PERMISSION_LEVELS.read : owner + PERMISSION_LEVELS.read),
 				write: () =>
-					setOwner(checkboxStates.owner.write ? owner - 2 : owner + 2),
+					setOwner(checkboxStates.owner.write ? owner - PERMISSION_LEVELS.write : owner + PERMISSION_LEVELS.write),
 				execute: () =>
-					setOwner(checkboxStates.owner.execute ? owner - 1 : owner + 1)
+					setOwner(checkboxStates.owner.execute ? owner - PERMISSION_LEVELS.execute : owner + PERMISSION_LEVELS.execute)
 			},
 			group: {
-				read: () => setGroup(checkboxStates.group.read ? group - 4 : group + 4),
+				read: () => setGroup(checkboxStates.group.read ? group - PERMISSION_LEVELS.read : group + PERMISSION_LEVELS.read),
 				write: () =>
-					setGroup(checkboxStates.group.write ? group - 2 : group + 2),
+					setGroup(checkboxStates.group.write ? group - PERMISSION_LEVELS.write : group + PERMISSION_LEVELS.write),
 				execute: () =>
-					setGroup(checkboxStates.group.execute ? group - 1 : group + 1)
+					setGroup(checkboxStates.group.execute ? group - PERMISSION_LEVELS.execute : group + PERMISSION_LEVELS.execute)
 			},
 			others: {
 				read: () =>
-					setOthers(checkboxStates.others.read ? others - 4 : others + 4),
+					setOthers(checkboxStates.others.read ? others - PERMISSION_LEVELS.read : others + PERMISSION_LEVELS.read),
 				write: () =>
-					setOthers(checkboxStates.others.write ? others - 2 : others + 2),
+					setOthers(checkboxStates.others.write ? others - PERMISSION_LEVELS.write : others + PERMISSION_LEVELS.write),
 				execute: () =>
-					setOthers(checkboxStates.others.execute ? others - 1 : others + 1)
+					setOthers(checkboxStates.others.execute ? others - PERMISSION_LEVELS.execute : others + PERMISSION_LEVELS.execute)
 			}
 		};
 	}, [checkboxStates, others, owner, group]);

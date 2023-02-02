@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Typography from '@/components/layout/Typography';
-import Divider from '@/components/layout/Divider';
 import ListItemButton from '@/components/dataDisplay/List/ListItemButton';
 import ListItemText from '@/components/dataDisplay/List/ListItemText';
+import Divider from '@/components/layout/Divider';
+import Typography from '@/components/layout/Typography';
 
 import routes from './routes';
 

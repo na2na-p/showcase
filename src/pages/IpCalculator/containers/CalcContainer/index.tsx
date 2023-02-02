@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
 
-import TextField from '@/components/input/TextField';
 import Button from '@/components/input/Button';
-import Typography from '@/components/layout/Typography';
+import TextField from '@/components/input/TextField';
 import Stack from '@/components/layout/Stack';
+import Typography from '@/components/layout/Typography';
 import isNil from '@/utils/isNil';
 
 import { CalcIp } from '../../utils/mod';
-import type { ipObj } from '../../utils/types/types';
+import type { IpObj } from '../../utils/types/types';
 
 export type CalcContainerProps = {
 	title: string;
@@ -16,7 +16,7 @@ export type CalcContainerProps = {
 }
 
 const CalcContainer = ({ title, ip, setHandler }: CalcContainerProps) => {
-	const [result, setResult] = React.useState<ipObj | null>(null);
+	const [result, setResult] = React.useState<IpObj | null>(null);
 
 	const ref = useRef<HTMLInputElement>(null);
 

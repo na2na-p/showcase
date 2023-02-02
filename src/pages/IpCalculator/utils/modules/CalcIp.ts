@@ -1,17 +1,17 @@
 /* eslint-disable valid-jsdoc */
-import { ipBin, ipObj } from '../types/types.js';
+import type { IpBin, IpObj } from '../types/types.js';
 
 /**
  * 引数として渡されたIPアドレスのネットワークアドレスを計算するクラス。
  * @class CalcIp
  */
 export class CalcIp {
-	#ip: ipBin;
-	#subnet: ipBin;
+	#ip: IpBin;
+	#subnet: IpBin;
 	#cidr?: number;
-	#networkAddress: ipBin;
-	#broadcastAddress: ipBin;
-	#hostAddress: ipBin;
+	#networkAddress: IpBin;
+	#broadcastAddress: IpBin;
+	#hostAddress: IpBin;
 	ipString(): string {
 		return CalcIp.addToDottedDecimalNotation(this.#ip);
 	}
@@ -21,22 +21,22 @@ export class CalcIp {
 	networkAddressString(): string {
 		return CalcIp.addToDottedDecimalNotation(this.#networkAddress);
 	}
-	getIp(): ipBin {
+	getIp(): IpBin {
 		return this.#ip;
 	}
-	getSubnet(): ipBin {
+	getSubnet(): IpBin {
 		return this.#subnet;
 	}
 	getCidr(): number | undefined {
 		return this.#cidr;
 	}
-	getNetworkAddress(): ipBin {
+	getNetworkAddress(): IpBin {
 		return this.#networkAddress;
 	}
-	getBroadcastAddress(): ipBin {
+	getBroadcastAddress(): IpBin {
 		return this.#broadcastAddress;
 	}
-	getHostAddress(): ipBin {
+	getHostAddress(): IpBin {
 		return this.#hostAddress;
 	}
 
@@ -101,9 +101,9 @@ export class CalcIp {
 
 	/**
 	 * thisで持ってるprivate変数オウム返し(テスト用)
-	 * @return {ipObj}
+	 * @return {IpObj}
 	 */
-	public getBinIpObj(): ipObj {
+	public getBinIpObj(): IpObj {
 		return {
 			ip: this.#ip,
 			subnet: this.#subnet,
@@ -114,7 +114,7 @@ export class CalcIp {
 		};
 	}
 
-	static addToDottedDecimalNotation(ipSrc: ipBin): string {
+	static addToDottedDecimalNotation(ipSrc: IpBin): string {
 		// 2進数表記で表されたIPアドレスを、3ケタ区切りの文字列に変換する。
 		// 256進数と解釈できるのでいい感じにする。
 		const ipString: string[] = [];
@@ -131,7 +131,7 @@ export class CalcIp {
 		return ipString.join('');
 	}
 
-	public getAllProperties(): ipObj {
+	public getAllProperties(): IpObj {
 		return {
 			ip: this.#ip,
 			subnet: this.#subnet,

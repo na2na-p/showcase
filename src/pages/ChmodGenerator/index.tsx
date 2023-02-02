@@ -4,6 +4,7 @@ import Table from '@/components/dataDisplay/Table';
 import Checkbox from '@/components/input/Checkbox';
 import Stack from '@/components/layout/Stack';
 import Typography from '@/components/layout/Typography';
+
 import { useHooks } from './hooks';
 
 const chmodGenerator = () => {

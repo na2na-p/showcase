@@ -1,10 +1,10 @@
 import { useRef } from 'react';
 
-type useHooksType = {
+type UseHooksType = {
 	setter: (result: string) => void
 }
 
-export const useHooks = ({ setter }: useHooksType) => {
+export const useHooks = ({ setter }: UseHooksType) => {
 	const inputRef = useRef<HTMLInputElement>(null);
 	const onButtonClick = () => {
 		if (inputRef.current) {

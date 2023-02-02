@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import Typography from '@/components/layout/Typography';
 import Divider from '@/components/layout/Divider';
+import Typography from '@/components/layout/Typography';
 
 import Child from './Child';
 

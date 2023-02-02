@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Button from '@/components/input/Button';
-import Stack from '@/components/layout/Stack';
 import Divider from '@/components/layout/Divider';
+import Stack from '@/components/layout/Stack';
 import Typography from '@/components/layout/Typography';
 
-import Input from './Input';
 import DataDisplay from './DataDisplay';
 import { useHooks } from './hooks';
+import Input from './Input';
 
 export type GameProps = {
 	answer?: number;

@@ -1,12 +1,11 @@
 import { CalcIp } from './CalcIp.js';
-
-import { resultType, ipBin } from '../types/types.js';
+import type { ResultType, IpBin } from '../types/types.js';
 
 
 export class Compare {
 	private source: CalcIp;
 	private dist: CalcIp;
-	public result: resultType;
+	public result: ResultType;
 
 	constructor(source: CalcIp, dist: CalcIp) {
 		this.source = source;
@@ -49,7 +48,7 @@ export class Compare {
 		return false;
 	}
 
-	private calcOtherNetAddr(myHost: CalcIp, distHost: CalcIp): ipBin {
+	private calcOtherNetAddr(myHost: CalcIp, distHost: CalcIp): IpBin {
 		// myHostのsubnetを利用してdistHostのネットワークアドレスを計算する
 		return distHost.getIp() & myHost.getSubnet();
 	}

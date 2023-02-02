@@ -1,13 +1,13 @@
 import React from 'react';
 
-import ChildToParent from '@/pages/ChildToParent';
 import Home from '@/Home';
-import LazyHooks from '@/pages/LazyHooksDemo';
+import ChildToParent from '@/pages/ChildToParent';
+import ChmodGenerator from '@/pages/ChmodGenerator';
 import Game from '@/pages/Game';
 import IpCalculator from '@/pages/IpCalculator';
-import ChmodGenerator from '@/pages/ChmodGenerator';
+import LazyHooks from '@/pages/LazyHooksDemo';
 
-type routes = {
+type Routes = {
 	path: () => string;
 	component: JSX.Element;
 }
@@ -40,7 +40,7 @@ const routes =
 			component: <ChmodGenerator />
 		}
 	} as const satisfies {
-		[P in Pages]: routes;
+		[P in Pages]: Routes;
 	};
 
 export default routes;

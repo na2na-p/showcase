@@ -1,10 +1,10 @@
-import React, { ReactNode } from 'react';
-
 import MuiTable from '@mui/material/Table';
 import MuiTableContainer from '@mui/material/TableContainer';
+import type { ReactNode } from 'react';
+import React from 'react';
 
-import TableHead from './TableHead';
 import TableBody from './TableBody';
+import TableHead from './TableHead';
 
 export type TableCoreProps = {
 	headers: ReactNode[],
