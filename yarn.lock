@@ -1936,9 +1936,9 @@ grapheme-splitter@^1.0.4:
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
 
 happy-dom@^9.0.0:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-9.0.1.tgz#8d105b85df48ce7ec5a85797c159d81cf879ceff"
-  integrity sha512-pXHyY1xllK95NnpjkYMOBoPDx43/Dg+3Q66+mqXkzVsiG+hL9vOu4YkrjzykCkp0kTxqmhSVSXi8LTVacP9GVQ==
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-9.1.0.tgz#95749c6aad0c6da0311f92d7318e8e7407104a41"
+  integrity sha512-Z/oOcAJsZjHFOQ/VK8n0CnZBjWucZNeZwFdlDK234vIBW9IVYGWjSUR9ujK6nwsSzJ6vNdYuSZoiag72AzlD0A==
   dependencies:
     css.escape "^1.5.1"
     he "^1.2.0"
