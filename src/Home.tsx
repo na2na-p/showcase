@@ -28,6 +28,13 @@ const Home = () => {
 			>
 				<ListItemText primary="呼んだり呼ばなかったり" />
 			</ListItemButton>
+			<ListItemButton
+				onClick={() => {
+					navigate(routes.eventHandler.path());
+				}}
+			>
+				<ListItemText primary="イベントハンドラ調査" />
+			</ListItemButton>
 			<Divider />
 			<Typography variant="subtitle1">ゲーム</Typography>
 			<ListItemButton

@@ -4,9 +4,11 @@ import { createBrowserRouter } from 'react-router-dom';
 import Home from '@/Home';
 import ChildToParent from '@/pages/ChildToParent';
 import ChmodGenerator from '@/pages/ChmodGenerator';
+import EventHandler from '@/pages/EventHandler';
 import Game from '@/pages/Game';
 import IpCalculator from '@/pages/IpCalculator';
 import LazyHooks from '@/pages/LazyHooksDemo';
+
 
 type Routes = {
 	path: () => string;
@@ -20,6 +22,7 @@ type Pages =
 	| 'numberGuessingGame'
 	| 'IpCalculator'
 	| 'chmodGenerator'
+	| 'eventHandler'
 	| 'notFound';
 
 export const routes = {
@@ -46,6 +49,10 @@ export const routes = {
 	chmodGenerator: {
 		path: () => '/chmod-generator',
 		component: <ChmodGenerator />
+	},
+	eventHandler: {
+		path: () => '/event-handler',
+		component: <EventHandler />
 	},
 	notFound: {
 		path: () => '*',
