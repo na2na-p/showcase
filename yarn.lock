@@ -1964,9 +1964,9 @@ graphemer@^1.4.0:
   integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
 
 happy-dom@^9.0.0:
-  version "9.20.1"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-9.20.1.tgz#ca0649d9ac401415d32ac8638abb4f45cc08b082"
-  integrity sha512-cEUGxStAKrsuUGdw5KJ8PgbZ5u41SP1UgL1E23ncLcMNf/kiQU2VcI8r5/Kc20V18gz4xNYkrj005Ex4xPJsoQ==
+  version "9.20.2"
+  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-9.20.2.tgz#9cd70b2240a1cb0db26e8e355ec000f715bd59cd"
+  integrity sha512-TcPgG59WsEd2tdUI4cr5hYxXF3TATgPwg8FTURLHXO/yOegYlA46jYwnZW+gPQqc4DXVWrH74mJdDVpsA7CHbA==
   dependencies:
     css.escape "^1.5.1"
     entities "^4.5.0"
